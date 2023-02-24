@@ -304,7 +304,7 @@ These are the most common array methods:
 | splice()	| adds/removes elements from an array                                              |
 | toString()| 	converts an array to a string, and returns the result                           |
 |  unshift()	| adds new elements to the beginning of an array, and returns the new length       |
-| valueOf()	|                                                                                  | returns the primitive value of an array                                          |
+| valueOf()	|  returns the primitive value of an array                                          |
 
 
 ### Array Access
