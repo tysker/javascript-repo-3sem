@@ -1,4 +1,4 @@
-# JAVASCRIPT EXERCISES DAY 1
+# JAVASCRIPT BASICS
 
 ## JAVASCRIPT FUNCTIONS
 
@@ -307,6 +307,98 @@ These are the most common array methods:
 | valueOf()	|                                                                                  | returns the primitive value of an array                                          |
 
 
-### Array Constructor
+### Array Access
+
+Array elements are accessed using their zero-based numeric index. The first element of an array is element 0, the second element is element 1, and so on. The index of the last element of the array is one less than the value of the array's length property.
+
+Example:
+
+```javascript
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+var first = fruits[0];
+var last = fruits[fruits.length - 1];
+```
+
+### Array Iteration
+
+The JavaScript for...of statement loops through the values of an iterable objects. It lets you loop over data structures that are iterable such as Arrays, Strings, Maps, NodeLists, and more.
+
+Example:
+
+1. for...of loop // for...of loop is the new way to loop over arrays and other iterable objects in JavaScript. 
+2. for...in loop // for...in loop is used to loop over the properties of an object.
+3. forEach() method // forEach() method executes a provided function once for each array element.
+4. for loop // for loop is used to loop through a block of code a number of times.
+5. while loop // while loop loops through a block of code as long as a specified condition is true.
+6. do...while loop // do...while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.
+7. map() method // map() method creates a new array with the results of calling a function for every array element.
+8. filter() method // filter() method creates a new array with array elements that passes a test.
+9. reduce() method // reduce() method reduces the array to a single value.
+10. every() method // every() method checks if all array values pass a test.
+11. some() method // some() method checks if any of the array values pass a test.
+
+
+```javascript
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+// for...of loop
+for (var x of fruits) {
+  console.log(x);
+}
+// for...in loop
+for (var x in fruits) {
+  console.log(fruits[x]);
+}
+// forEach() method
+fruits.forEach(function(item, index, array) {
+  console.log(item, index);
+})
+// for loop
+for (var i = 0; i < fruits.length; i++) {
+  console.log(fruits[i]);
+}
+// while loop
+var i = 0;
+while (i < fruits.length) {
+  console.log(fruits[i]);
+  i++;
+}
+// do...while loop
+var i = 0;
+do {
+  console.log(fruits[i]);
+  i++;
+}
+while (i < fruits.length);
+// map() method
+var numbers = [45, 4, 9, 16, 25];
+
+var numbers1 = numbers.map(myFunction);
+// filter() method
+function myFunction(value, index, array) {
+  return value * 2;
+}
+
+var over18 = numbers.filter(myFunction);
+// reduce() method
+function myFunction(value, index, array) {
+  return value > 18;
+}
+
+var sum = numbers.reduce(myFunction);
+// every() method
+function myFunction(total, value, index, array) {
+  return total + value;
+}
+
+var allOver18 = numbers.every(myFunction);
+// some() method
+function myFunction(value, index, array) {
+  return value > 18;
+}
+
+var someOver18 = numbers.some(myFunction);
+
+```
 
 
