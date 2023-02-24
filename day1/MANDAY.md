@@ -47,7 +47,7 @@ const str = 'My name is John, and I am 30 years old. I study at the University o
 8. Now change the first letter of all words to uppercase using a loop. Use the string array in the first example.
 9. Join the first array into a string again with `-` between the words. 
 10. Remove the last `.` from the string.
-11. Use the original string to find all occurrences of the word 'John'; [TRY THIS](https://rubular.com/)
+11. Use the original string to find all occurrences of the word 'John' with the help of match(). You have to use a regular expression. [TRY THIS](https://rubular.com/)
 
 #### Part 3 Objects
 
