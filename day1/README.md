@@ -155,7 +155,7 @@ const square = (number) => { return number * number }
 const x = square(4) // x gets the value 16
 ```
 
-### JAVASCRIPT OBJECTS
+## JAVASCRIPT OBJECTS
 
 ### What are objects in JavaScript?
 
@@ -237,7 +237,7 @@ class Square extends Polygon {
 var s = new Square(5);
 ```
 
-### Array
+## JAVASCRIPT ARRAYS
 
 An array is a special variable, which can hold more than one value at a time. If you have a list of items (a list of car names, for example), storing the cars in single variables could look like this:
     
