@@ -22,7 +22,7 @@
 6. What does `NaN` mean? 
 7. What is the difference between `null` and `undefined`?
 
-#### Part 3 Strings
+#### Part 3 Strings 
 
 - [JavaScript Strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 
