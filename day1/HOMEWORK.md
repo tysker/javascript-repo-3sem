@@ -1,4 +1,4 @@
-## JAVASCRIPT EXERCISES DAY 1
+## JAVASCRIPT Homework DAY 1
 
 #### Part 1 Basics
 
