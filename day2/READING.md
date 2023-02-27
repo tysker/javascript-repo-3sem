@@ -37,7 +37,25 @@ that provides a way to access and manipulate the HTML document in real-time usin
 ## The DOM Tree
 
 The DOM represents a document with a logical tree. Each branch of the tree ends in a node, and each node contains objects. 
-DOM methods allow programmatic access to the tree; with them you can change the document's structure, style, or content. 
+DOM methods allow programmatic access to the tree; with them, you can change the document's structure, style, or content. 
+
+## How to interact with the Dom
+
+To interact with the DOM, you can use JavaScript. Here are some of the basic steps to interact with the DOM:
+
+1. Accessing Elements: The first step to interact with the DOM is to access the elements you want to manipulate using JavaScript selectors. 
+You can use selectors such as **getElementById(), querySelector(), or getElementsByClassName()** to select the elements you want to interact with.
+2. Modifying Elements: Once you have selected an element, you can modify its content, attributes, and styling using JavaScript methods and properties. 
+For example, you can use the innerHTML property to change the content of an element, the **setAttribute()** method to set an attribute on an element, 
+or the style property to modify the styling of an element.
+3. Creating and Removing Elements: You can also create new elements and remove existing elements from the DOM using JavaScript. 
+You can use methods such as **createElement(), appendChild(), insertBefore(), or removeChild()** to add or remove elements from the DOM.
+4. Handling Events: Finally, you can use event listeners to handle user input and other events on the page. You can attach event listeners 
+to elements using methods such as **addEventListener()**, and then respond to events such as clicks, key presses, or form submissions by executing JavaScript code.
+
+Overall, interacting with the DOM using JavaScript allows you to create dynamic and interactive web pages that respond to user input and other events. 
+By mastering the basics of DOM manipulation in JavaScript, you can create powerful and engaging user experiences on the web.
+
 
 ## Events
 
@@ -81,12 +99,18 @@ For example, consider the following HTML code:
 If a click event is triggered on the button element, it will first be handled by the button's event listener (if there is one), and then it will "bubble up" to the <p> element, 
 and then to the <div> element. If there are event listeners attached to the <p> or <div> elements, they will also be triggered.
 
-To prevent event bubbling, you can use the stopPropagation() method on the event object that is passed to the event listener. This will prevent the event from propagating any further up the DOM tree.
+To prevent event bubbling, you can use the **stopPropagation()** method on the event object that is passed to the event listener. This will prevent the event from propagating any further up the DOM tree.
 
 In summary, event bubbling is the process by which an event is triggered on an element and then propagates up the DOM tree to all its parent elements. 
 This can be useful for handling events on parent elements, but can also lead to unexpected behavior if not handled properly.
 
-## Event Delegation
+Important Links:
+
+* [The DOM, MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
+* [Event reference](https://developer.mozilla.org/en-US/docs/Web/Events)
+* [Introduction to events](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture)
+* [Event bubbling](https://javascript.info/bubbling-and-capturing)
+
 
 
 
