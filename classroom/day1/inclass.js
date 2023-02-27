@@ -6,6 +6,46 @@
 This is a multi-line comment
  */
 
+// 2 Prototype inheritance
+
+const Job = {
+    jobTitle: "Software Developer",
+    fullName: "John Doe",
+    getJob: function () {
+        return "Software Developer";
+    }
+}
+
+const Customer = function (firstName, lastName, age, email) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.email = email;
+}
+
+console.log(Customer.prototype);
+
+Customer.prototype.getFullName = function () {
+    return `${this.firstName} ${this.lastName}`;
+}
+
+Customer.prototype.getAge = function () {
+    return this.age;
+}
+
+const michelle = new Customer("Michelle", "Doe", 25, "michelle@mail.com");
+console.log(michelle.getFullName());
+console.log("Age: ", michelle.getAge());
+
+michelle.getMail = function () {
+    return this.email;
+}
+console.log(michelle)
+console.log(michelle.getMail());
+
+console.log(michelle.__proto__);
+console.log(michelle.__proto__ === Customer.prototype);
+
 // 2 JavaScript variables, constants, and data types
 
 var firstName = "John";
@@ -86,16 +126,47 @@ const price = package === "Basic" ? 1000 : package === "Medium" ? 2000 : package
 console.log(price);
 
 
-
 // 4 JavaScript functions
+
+// Function Declarations vs. Expressions
+
+// Function declaration
+function calcAge1(birthYeah) {
+    return 2037 - birthYeah;
+}
+
+const age1 = calcAge1(1991);
+
+// Function expression
+const calcAge2 = function (birthYeah) {
+    return 2037 - birthYeah;
+}
+const age2 = calcAge2(1991);
+
+console.log(age1, age2);
+
+// Immediately invoked function expressions (IIFE)
+
+(function () {
+    console.log("This will never run again");
+}());
+
+
+// Arrow functions
+
+const calcAge3 = birthYeah => 2037 - birthYeah;
+const age3 = calcAge3(1991);
+console.log(age3);
 
 function scope() {
     var myName = "Steve";
     let myHeight = 1.80;
     const MY_AGE = 26;
-    function innerFunction () {
+
+    function innerFunction() {
         console.log("From Inner function: ", myName, myHeight, MY_AGE);
     }
+
     innerFunction();
     console.log(myName, myHeight, MY_AGE);
     // console.log(this)
@@ -111,18 +182,18 @@ const multiplier = (a, b) => {
     }
 }
 
-const times3  = multiplier(2, 2)(3)(4);
+const times3 = multiplier(2, 2)(3)(4);
 console.log("Times 3: ", times3);
 
 /*
     IN CLASS EXERCISE
  */
 const interviewQuestion = (job) => {
-    if(job === 'designer') {
+    if (job === 'designer') {
         return (name) => {
             console.log(`${name}, can you please explain what UX design means?`);
         }
-    } else if(job === 'teacher') {
+    } else if (job === 'teacher') {
         return (name) => {
             console.log(`${name}, which subject do you teach?`);
         }
@@ -210,3 +281,25 @@ const person2 = {
 for (const person2Key in person2) {
     console.log(person2Key, person2[person2Key]);
 }
+
+// Block Scope
+
+// ES5
+(function () {
+    var c = 3;
+}());
+
+console.log(c); // undefined
+
+// ES6
+
+{
+    const a = 1;
+    let b = 2;
+    var c = 3;
+}
+
+console.log(c); // 3
+console.log(a + b); // ReferenceError: a is not defined
+
+
