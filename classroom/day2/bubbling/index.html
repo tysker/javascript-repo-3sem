@@ -7,32 +7,28 @@
         .mydiv {
             width: 25px;
             height: 25px;
-            background-color:yellow;
-            margin:1px;
+            background-color: yellow;
+            margin: 1px;
         }
     </style>
 </head>
 <body>
 <div id="parent">
-    <div id="child-0" class="mydiv"></div>
-    <div id="child-1" class="mydiv"></div>
-    <div id="child-2" class="mydiv"></div>
-    <div id="child-3" class="mydiv"></div>
-    <div id="child-4" class="mydiv"></div>
-    <div id="child-5" class="mydiv"></div>
-    <div id="child-6" class="mydiv"></div>
-    <div id="child-7" class="mydiv"></div>
-    <div id="child-8" class="mydiv"></div>
-    <div id="child-9" class="mydiv"></div>
+    <div id="child-0" class="mydiv">1</div>
+    <div id="child-1" class="mydiv">2</div>
+    <div id="child-2" class="mydiv">3</div>
+    <div id="child-3" class="mydiv">4</div>
+    <div id="child-4" class="mydiv">5</div>
+    <div id="child-5" class="mydiv">6</div>
+    <div id="child-6" class="mydiv">7</div>
+    <div id="child-7" class="mydiv">8</div>
+    <div id="child-8" class="mydiv">9</div>
+    <div id="child-9" class="mydiv">0</div>
 </div>
 
 <p id="output"></p>
 
 <script>
-    document.querySelector("#child-5").addEventListener('click', function (e) {
-        document.querySelector("#output").innerHTML = e.target.id;
-    }, true)
-
 </script>
 </body>
 </html>

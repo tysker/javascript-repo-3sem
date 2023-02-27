@@ -289,17 +289,17 @@ for (const person2Key in person2) {
     var c = 3;
 }());
 
-console.log(c); // undefined
+// console.log(c); // undefined
 
 // ES6
 
-{
-    const a = 1;
-    let b = 2;
-    var c = 3;
-}
-
-console.log(c); // 3
-console.log(a + b); // ReferenceError: a is not defined
+// {
+//     const a = 1;
+//     let b = 2;
+//     var c = 3;
+// }
+//
+// console.log(c); // 3
+// console.log(a + b); // ReferenceError: a is not defined
 
 
