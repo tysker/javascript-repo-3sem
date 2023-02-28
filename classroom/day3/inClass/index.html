@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fetch</title>
+</head>
+<body>
+
+<form id="form_id">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name">
+    <label for="age">Age</label>
+    <input type="number" id="age" name="age">
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    const theForm = document.getElementById("form_id");
+
+    document.getElementById("form_id").addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const data = new FormData(theForm);
+        logFormEntries(data);
+        resetValue();
+    })
+
+    function logFormEntries(data) {
+        console.log(data)
+        for (let pair of data.entries()) {
+            console.log(`"${pair[0]}" , "${pair[1]}"`);
+        }
+    }
+
+    function resetValue() {
+        document.querySelector("#name").value = "";
+        document.querySelector("#age").value = "";
+    }
+
+</script>
+
+</body>
+</html>
