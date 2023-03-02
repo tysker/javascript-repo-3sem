@@ -57,6 +57,31 @@ Here's a breakdown of the command:
 
 That's it! Your application files should now be on your Nginx server and ready to be served.
 
+You can use this BASH script to automate the deployment process:
+
+```bash
+#!/usr/bin/env bash
+
+# PROJECT_NAME="Name or your frontend project, for example movie --> folder you created under /var/www"
+# DROPLET_URL="URL for your droplet"
+echo -n "please enter the project name as it appears on the server in /var/www/"
+read -r
+PROJECT_NAME=$REPLY
+echo -n "please enter the droplet url (e.g myserver.dk)"
+read -r
+DROPLET_URL=$REPLY
+
+echo "##############################"
+echo "Building the frontend project"
+echo "##############################"
+npm run build
+
+echo "##############################"
+echo "Deploying Frontend project..."
+echo "##############################"
+
+scp -r ./dist/* root@$DROPLET_URL:/var/www/$PROJECT_NAME
+```
 
 ### In which directory in nginx should i place my application?
 
