@@ -32,6 +32,7 @@ The location /api block proxies requests to a backend server running on port 300
 
 1. Restart Nginx: After you've created your Nginx configuration file, you need to restart Nginx for the changes to take effect. You can do this by running sudo systemctl restart nginx (assuming you're using systemd).
 
+***
 
 ### scp
 
@@ -82,6 +83,7 @@ echo "##############################"
 
 scp -r ./dist/* root@$DROPLET_URL:/var/www/$PROJECT_NAME
 ```
+***
 
 ### In which directory in nginx should i place my application?
 
