@@ -1,5 +1,31 @@
 ## CLASS EXERCISES DAY 4
 
+### Forms
+
+```JS
+    const theForm = document.getElementById("form_id");
+
+    document.getElementById("form_id").addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const data = new FormData(theForm);
+        logFormEntries(data);
+        resetValue();
+    })
+
+    function logFormEntries(data) {
+        console.log(data)
+        for (let pair of data.entries()) {
+            console.log(`"${pair[0]}" , "${pair[1]}"`);
+        }
+    }
+
+    function resetValue() {
+        document.querySelector("#name").value = "";
+        document.querySelector("#age").value = "";
+    }
+```
+
 ### Fetch data from a REST-endpoint (Mongo-DB Docker Server)
 
 In this exercise, we will fetch data from a REST-endpoint using the `fetch` function. The REST-endpoint is a Docker container running a Mongo-DB server. 
