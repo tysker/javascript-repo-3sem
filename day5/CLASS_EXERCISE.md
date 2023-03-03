@@ -47,7 +47,7 @@ Hints:
 ```JS
     this.carElement = document.createElement("img");
 
-    this.carElement.src = .....;
+    this.carElement.src = imageUrl;
 
     this.carElement.style.cssText = this.carPosition();
     
