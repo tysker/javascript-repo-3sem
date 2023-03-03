@@ -1,7 +1,8 @@
 ## CLASS EXERCISES DAY 5
 
 - Deployment of a simple web application
-- Car Game (OOP)
+- Car Game Exercise (OOP, DOM Manipulation)
+- Credit Card Exercise (JSON, Arrays like map, filter and reduce)
 
 ## Deployment of a simple web application
 
