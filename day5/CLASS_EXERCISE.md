@@ -29,3 +29,17 @@
 8. Add an event listener to the document. The event listener should call the moveCar function with the car object and the event as parameters.
 9. Call the carPosition method on the car object and display the result in the console.
 
+The car Picture is located here: "http://nostarch.com/images/car.png"
+
+Hints:
+
+```JS
+    carPosition() {
+        return (
+            "position: absolute; left: " + this.x + "px; " + "top: " + this.y + "px;"
+        );
+```
+
+```JS
+    this.carElement = document.createElement("img");
+```
