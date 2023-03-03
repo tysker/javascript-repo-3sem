@@ -24,9 +24,17 @@
 
 - [Car Link](https://github.com/dat3startcode/javaScriptInClass3sem/tree/main/day5/car_game)
 
-1. Create a Car class (ES6 Class Syntax) object with 3 properties: x, y, speed = 10 (constructor)
+Description:
+
+This is a very simple car game where you can move the car around the screen using the arrow keys. 
+The car is represented by an image. The car should be able to move in all directions. 
+The car should not be able to move outside the screen.(optional). 
+
+1. Create a folder called `car_game`
+2. Copy both index.html, style.css and script.js from the above Car Repo into the folder
+2. In script.js file you will find a Car Class (ES6 Class Syntax) object with 3 properties: x, y, speed = 10
 2. We need 6 methods in our Car object: moveUp, moveDown, moveLeft, moveRight, carPosition(is implemented) and draw
-3. The move methods should change the x and y properties. 
+3. The move methods should change the x and y properties of the car. 
 4. The carPosition method should return the current position of the car
 5. Create a method called moveCar outside the Car object. This method should take a car object and an event as parameter. 
 6. Inside the moveCar function you use the event to check which key was pressed and call the correct move method on the car object. `ArrowUp` should call `moveUp`, `ArrowDown` should call `moveDown` etc.
@@ -38,5 +46,11 @@ Hints:
 
 ```JS
     this.carElement = document.createElement("img");
+
+    this.carElement.src = .....;
+
+    this.carElement.style.cssText = this.carPosition();
+    
+    document.querySelector("body").appendChild(this.carElement);
 ```
 
