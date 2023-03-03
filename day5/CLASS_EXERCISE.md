@@ -17,10 +17,15 @@
 
 ## Car Game (OOP)
 
+- [Game Pic](https://i.imgur.com/9kwqEkO.png)
+- Car URL IMG: "http://nostarch.com/images/car.png"
+
+
+
 - [Car Link](https://github.com/dat3startcode/javaScriptInClass3sem/tree/main/day5/car_game)
 
-1. Create a Car (ES6 Class Syntax) object with 3 properties: x, y, speed = 10
-2. We need 6 methods in our Car object: moveUp, moveDown, moveLeft, moveRight, carPosition and draw
+1. Create a Car class (ES6 Class Syntax) object with 3 properties: x, y, speed = 10 (constructor)
+2. We need 6 methods in our Car object: moveUp, moveDown, moveLeft, moveRight, carPosition(is implemented) and draw
 3. The move methods should change the x and y properties. 
 4. The carPosition method should return the current position of the car
 5. Create a method called moveCar outside the Car object. This method should take a car object and an event as parameter. 
@@ -29,17 +34,9 @@
 8. Add an event listener to the document. The event listener should call the moveCar function with the car object and the event as parameters.
 9. Call the carPosition method on the car object and display the result in the console.
 
-The car Picture is located here: "http://nostarch.com/images/car.png"
-
 Hints:
-
-```JS
-    carPosition() {
-        return (
-            "position: absolute; left: " + this.x + "px; " + "top: " + this.y + "px;"
-        );
-```
 
 ```JS
     this.carElement = document.createElement("img");
 ```
+
