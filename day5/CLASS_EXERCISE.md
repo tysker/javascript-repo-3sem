@@ -35,7 +35,7 @@ The car should not be able to move outside the screen.(optional).
 2. In script.js file you will find a Car Class (ES6 Class Syntax) object with 3 properties: x, y, speed = 10
 2. We need 6 methods in our Car object: moveUp, moveDown, moveLeft, moveRight, carPosition(is implemented) and draw
 3. The move methods should change the x and y properties of the car. 
-4. The carPosition method should return the current position of the car
+4. The carPosition method is returning the current position of the car
 5. Create a method called moveCar outside the Car object. This method should take a car object and an event as parameter. 
 6. Inside the moveCar function you use the event to check which key was pressed and call the correct move method on the car object. `ArrowUp` should call `moveUp`, `ArrowDown` should call `moveDown` etc.
 7. Create a new Car object and call the draw method on it.
