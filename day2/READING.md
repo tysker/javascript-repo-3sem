@@ -104,6 +104,13 @@ To prevent event bubbling, you can use the **stopPropagation()** method on the e
 In summary, event bubbling is the process by which an event is triggered on an element and then propagates up the DOM tree to all its parent elements. 
 This can be useful for handling events on parent elements, but can also lead to unexpected behavior if not handled properly.
 
+
+### Node, NPM and NPX
+
+NEEDS TO BE DONE!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
 Important Links:
 
 * [The DOM, MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)

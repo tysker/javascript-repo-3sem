@@ -11,6 +11,10 @@
 2. Build a simple web application
 3. Deploy the application to NGINX
 
+## CreditCard Exercise
+
+- [CreditCard Link](https://github.com/dat3startcode/javaScriptInClass3sem/tree/main/day5/creditcardIterationExercise)
+
 ## Car Game (OOP)
 
 - [Car Link](https://github.com/dat3startcode/javaScriptInClass3sem/tree/main/day5/car_game)
