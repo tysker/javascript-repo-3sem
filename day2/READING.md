@@ -96,9 +96,8 @@ For example, consider the following HTML code:
 </div>
 ```
 
-If a click event is triggered on the button element, it will first be handled by the button's event listener (if there is one), and then it will "bubble up" to the <p> element, 
-and then to the <div> element. If there are event listeners attached to the <p> or <div> elements, they will also be triggered.
-
+If a click event is triggered on the button element, it will first be handled by the button's event listener (if there is one), 
+and then it will "bubble up" to the `<p>` element, and then to the `<div>` element. If there are event listeners attached to the `<p>` or `<div>` elements, they will also be triggered. 
 To prevent event bubbling, you can use the **stopPropagation()** method on the event object that is passed to the event listener. This will prevent the event from propagating any further up the DOM tree.
 
 In summary, event bubbling is the process by which an event is triggered on an element and then propagates up the DOM tree to all its parent elements. 
