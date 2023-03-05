@@ -82,7 +82,7 @@ svg {
 ```
 
 3. Connect the style and javascript file to the html file.
-4. Add the europe svg map to the html file [Countries_Europe.svg](https://github.com/Cphdat3sem2017f/StartcodeExercises/blob/master/JS/Countries_Europe.svg)
+4. Add the europe svg map to the html file [Countries_Europe.svg](https://github.com/dat3startcode/javaScriptExercises3sem/blob/main/exercises/europwMap.svg)
 5. Run the index.html file in a browser and see the map. 
 6. Study the code of the svg file. 
 7. You will notice that each country is given the ISO-country code as the id. This is very convenient, because we can use the id to identify the country. 
