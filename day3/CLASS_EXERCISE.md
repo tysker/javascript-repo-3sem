@@ -2,29 +2,43 @@
 
 ### Forms
 
-```JS
-    const theForm = document.getElementById("form_id");
+In this exercise, we will create a form and handle the form data using Javascript.
+Use the following HTML code as a starting point:
 
-    document.getElementById("form_id").addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        const data = new FormData(theForm);
-        logFormEntries(data);
-        resetValue();
-    })
-
-    function logFormEntries(data) {
-        console.log(data)
-        for (let pair of data.entries()) {
-            console.log(`"${pair[0]}" , "${pair[1]}"`);
-        }
-    }
-
-    function resetValue() {
-        document.querySelector("#name").value = "";
-        document.querySelector("#age").value = "";
-    }
+```HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Exercise</title>
+</head>
+<body>
+    <form id="form_id">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
 ```
+
+1. Create a new folder called `FormExercise` and create a new javascript file called `index.js` in it.
+2. Create a function called `logFormEntries` which takes a `FormData` object as a parameter and logs the entries in the form to the console.
+3. Create a function called `resetValue` which resets the value of the input fields to an empty string.
+4. Hook up an event handler on the form which calls the `logFormEntries` function and the `resetValue` function when the form is submitted.
+5. Test the form by entering some data and submitting the form.
+
+Hint: 
+- Use the `FormData` object to get the form data.
+- Use the `addEventListener` function to hook up an event handler on the form.
+- Use the `preventDefault` function to prevent the form from being submitted.
+- Use the `querySelector` function to get the input fields.
+- Use the `getElementById` ot `querySelector` function to get the form.
+- Use the `value` property to get the value of the input fields.
+
 
 ### Fetch data from a REST-endpoint (Mongo-DB Docker Server)
 
@@ -45,7 +59,7 @@ The data is stored in a collection called `students` and the REST-endpoint is ru
 
 In this exercise, we will combine SVG with several of the topics we have been around this semester such as AJAX and REST-endpoints to obtain data, and Javascript for DOM-manipulation.
 
-The task is to create a web-page with a map of Europe which, when a country is selected with a mouse click, should highlight the country and print details about the country as sketched below.
+The task is to create a web-page with a map of Europe which, when a country is selected with a mouse click, should highlight the country and print details about the country like name, capital, population, area and borders.
 
 1. Create a new folder called `EuropeMap` and create a new HTML-file called `index.html` in it.
 2. Create also a new Javascript-file called `index.js` in the same folder.
@@ -63,23 +77,24 @@ svg {
 }
 ```
 
-4. Run `npm init` to create a `package.json` file. 
-5. Get the map [Countries_Europe.svg](https://github.com/Cphdat3sem2017f/StartcodeExercises/blob/master/JS/Countries_Europe.svg) and copy it into the clipboard. 
-6. This is an SVG image where each country is given the ISO-country code as the id. This is very convenient, because using the public REST API given here: http://restcountries.com/v3.1/alpha/de
-7. Hook up an event handler on the map, get the id, perform an AJAX request to fetch the JSON-data from the link given above and update the GUI using the JSON returned with following information:
+4. Get the map [Countries_Europe.svg](https://github.com/Cphdat3sem2017f/StartcodeExercises/blob/master/JS/Countries_Europe.svg) and copy it into the clipboard. 
+5. This is an SVG image where each country is given the ISO-country code as the id. This is very convenient, because we can use the id to identify the country. 
+6. With the country id we can fetch the JSON-data for the country from the following REST-endpoint: https://restcountries.com/v3.1/alpha/{countryId}
+7. Hook up an event handler on the map, to get the country id, perform an AJAX request to fetch the JSON-data and with help from the link given above to update the GUI using the JSON that is returned with following information:
    * Name
    * Capital
    * Population
    * Area 
    * Borders (list of countries)
 
-Hints:
+**Hints:**
 
+* To get the country id of each country tag, you have to use the knowledge about event delegation or also called event bubbling.
 * You can use the `fetch` function to perform the AJAX request.
 * You can use the `then` function to get the JSON data from the response.
 * You can use the `innerHTML` property to update the GUI.
 * You can use the `forEach` function to iterate over the borders array.
-* You can use the `getElementById` function to get the element with a given id.
+* You can use the `querySelector` function to get the element with a given id.
 * You can hook up a click-handler on the overall map (id =svg2), and in that, find the id for the actual element that was clicked (= the country code) via the target property of the event handler.
 * You can change the colour of the selected country by changing its fill property 
 
