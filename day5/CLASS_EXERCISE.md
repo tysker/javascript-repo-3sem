@@ -14,7 +14,7 @@
 
 ### Car Game (OOP)
 
-- [Car Repo](https://github.com/dat3startcode/javaScriptInClass3sem/tree/main/day5/car_game)
+- [Car Repo](https://github.com/dat3startcode/javaScriptExercises3sem/tree/main/exercises/car_game)
 
 
 
