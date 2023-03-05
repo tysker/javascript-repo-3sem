@@ -55,49 +55,6 @@ The data is stored in a collection called `students` and the REST-endpoint is ru
 - Create a function called `updateStudent` which updates a student with a given id from the endpoint and returns the JSON data.
 
 
-### Europe Map
-
-In this exercise, we will combine SVG with several of the topics we have been around this semester such as AJAX and REST-endpoints to obtain data, and Javascript for DOM-manipulation.
-
-The task is to create a web-page with a map of Europe which, when a country is selected with a mouse click, should highlight the country and print details about the country like name, capital, population, area and borders.
-
-1. Create a new folder called `EuropeMap` and create a new HTML-file called `index.html` in it.
-2. Create also a new Javascript-file called `index.js` in the same folder.
-3. Create a new file called `index.css` and copy the following CSS into it:
-
-```css
-body {
-  margin: 0;
-  padding: 0;
-}
-
-svg {
-  width: 100%;
-  height: 100%;
-}
-```
-
-4. Get the map [Countries_Europe.svg](https://github.com/Cphdat3sem2017f/StartcodeExercises/blob/master/JS/Countries_Europe.svg) and copy it into the clipboard. 
-5. This is an SVG image where each country is given the ISO-country code as the id. This is very convenient, because we can use the id to identify the country. 
-6. With the country id we can fetch the JSON-data for the country from the following REST-endpoint: https://restcountries.com/v3.1/alpha/{countryId}
-7. Hook up an event handler on the map, to get the country id, perform an AJAX request to fetch the JSON-data and with help from the link given above to update the GUI using the JSON that is returned with following information:
-   * Name
-   * Capital
-   * Population
-   * Area 
-   * Borders (list of countries)
-
-**Hints:**
-
-* To get the country id of each country tag, you have to use the knowledge about event delegation or also called event bubbling.
-* You can use the `fetch` function to perform the AJAX request.
-* You can use the `then` function to get the JSON data from the response.
-* You can use the `innerHTML` property to update the GUI.
-* You can use the `forEach` function to iterate over the borders array.
-* You can use the `querySelector` function to get the element with a given id.
-* You can hook up a click-handler on the overall map (id =svg2), and in that, find the id for the actual element that was clicked (= the country code) via the target property of the event handler.
-* You can change the colour of the selected country by changing its fill property 
-
 
 
 
