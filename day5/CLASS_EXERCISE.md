@@ -10,7 +10,7 @@
 
 ### CreditCard Exercise
 
-- [CreditCard Link](https://github.com/dat3startcode/javaScriptInClass3sem/tree/main/day5/creditcardIterationExercise)
+- [CreditCard Link](https://github.com/dat3startcode/javaScriptExercises3sem/tree/main/exercises/creditcardIterationExercise)
 
 ### Car Game (OOP)
 
