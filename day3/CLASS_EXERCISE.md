@@ -86,7 +86,12 @@ svg {
 5. Run the index.html file in a browser and see the map. 
 6. Study the code of the svg file. 
 7. You will notice that each country is given the ISO-country code as the id. This is very convenient, because we can use the id to identify the country. 
-8. With the country id we can fetch the JSON-data for the country from the following REST-endpoint: https://restcountries.com/v3.1/alpha/{countryId}
+8. With the country id we can fetch the JSON-data for the country from the following REST-endpoint:
+
+```javascript
+const url = `https://restcountries.com/v3.1/alpha/${countryId}`;
+```
+
 9. Hook up an event handler on the map, to get the country id. 
 10. Perform an AJAX request to fetch the JSON-data for the country. 
 11. Update the GUI using the JSON that is returned with following information:
